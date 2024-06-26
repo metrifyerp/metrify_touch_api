@@ -1,0 +1,866 @@
+{
+	"info": {
+		"_postman_id": "4a908e1e-4125-4bbb-999e-b7e5b28d2041",
+		"name": "alianzaapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "agregar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "empClave",
+									"value": "03",
+									"type": "text"
+								},
+								{
+									"key": "empRazonSocial",
+									"value": "LWS, S.A. de C.V.",
+									"type": "text"
+								},
+								{
+									"key": "empNombre",
+									"value": "Laguna Web Service",
+									"type": "text"
+								},
+								{
+									"key": "empRfc",
+									"value": "MAL870811BI3",
+									"type": "text"
+								},
+								{
+									"key": "empCalle",
+									"value": "Ortega",
+									"type": "text"
+								},
+								{
+									"key": "empNumExterior",
+									"value": "401",
+									"type": "text"
+								},
+								{
+									"key": "empNumInterior",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "empColonia",
+									"value": "Centro",
+									"type": "text"
+								},
+								{
+									"key": "empCiudad",
+									"value": "Torreón",
+									"type": "text"
+								},
+								{
+									"key": "empCsdCertificado",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "empCsdKey",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "empCsdContrasena",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "estNumCtrl",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cpoNumCtrl",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sxrNumCtrl",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "usuNumCtrl",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/alianzaapi/public/empresa/v1/agregar",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"empresa",
+								"v1",
+								"agregar"
+							]
+						},
+						"description": "Agrega una nueva empresa"
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost/alianzaapi/public/empresa/v1/eliminar?empNumCtrl=6",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"empresa",
+								"v1",
+								"eliminar"
+							],
+							"query": [
+								{
+									"key": "empNumCtrl",
+									"value": "6"
+								}
+							]
+						},
+						"description": "Elimina una empresa existente"
+					},
+					"response": []
+				},
+				{
+					"name": "modificar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empClave\": \"02\",\r\n    \"empRazonSocial\": \"LWS, S.A. de C.V.\",\r\n    \"empNombre\": \"Laguna Web Services\",\r\n    \"empRfc\": \"LWS870811BI1\",\r\n    \"empCalle\":\"Calle Ortega\",\r\n    \"empNumExterior\":401,\r\n    \"empNumInterior\":\"\",\r\n    \"empColonia\":\"El galeme\",\r\n    \"empCiudad\":\"Torreón\",\r\n    \"empCsdCertificado\":\"\",\r\n    \"empCsdKey\":\"\",\r\n    \"empCsdContrasena\":\"\",\r\n    \"estNumCtrl\":7,\r\n    \"cpoNumCtrl\":1,\r\n    \"sxrNumCtrl\":1,\r\n    \"usuNumCtrl\":1\r\n}"
+						},
+						"url": {
+							"raw": "localhost/alianzaapi/public/empresa/v1/modificar?empNumCtrl=6&XDEBUG_SESSION_START=19321",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"empresa",
+								"v1",
+								"modificar"
+							],
+							"query": [
+								{
+									"key": "empNumCtrl",
+									"value": "6"
+								},
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "19321"
+								}
+							]
+						},
+						"description": "Actualiza una empresa existente"
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerTabla",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IkphdmllciIsImVtYWlsIjoianNAZ21haWwuY29tIn0.hb_Fck5jEo0F03xz5Z3OiXrIzdf95YFFpiy4FPf9L8Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost/alianzaapi/public/empresa/v1/obtenerTabla",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"empresa",
+								"v1",
+								"obtenerTabla"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Obtiene toda la tabla de Empresa en formato json"
+					},
+					"response": []
+				}
+			],
+			"description": "Class Erp02_1m"
+		},
+		{
+			"name": "CodigoPostal",
+			"item": [
+				{
+					"name": "agregar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cpoCodigo",
+									"value": "03",
+									"type": "text"
+								},
+								{
+									"key": "estClave",
+									"value": "01",
+									"type": "text"
+								},
+								{
+									"key": "cpoCiudad",
+									"value": "Matamoros",
+									"type": "text"
+								},
+								{
+									"key": "cpoColonia",
+									"value": "MAL870811BI3",
+									"type": "text"
+								},
+								{
+									"key": "cpoColoniaTipo",
+									"value": "Ortega",
+									"type": "text"
+								},
+								{
+									"key": "cpoZona",
+									"value": "401",
+									"type": "text"
+								},
+								{
+									"key": "usuNumCtrl",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/alianzaapi/public/codigopostal/v1/agregar",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"codigopostal",
+								"v1",
+								"agregar"
+							]
+						},
+						"description": "Agrega un nuevo código postal"
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost/alianzaapi/public/codigopostal/v1/eliminar?cpoNumCtrl=144105",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"codigopostal",
+								"v1",
+								"eliminar"
+							],
+							"query": [
+								{
+									"key": "cpoNumCtrl",
+									"value": "144105"
+								}
+							]
+						},
+						"description": "Elimina una empresa existente"
+					},
+					"response": []
+				},
+				{
+					"name": "modificar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpoCodigo\": \"02\",\r\n    \"estClave\": \"LWS, S.A. de C.V.\",\r\n    \"cpoCiudad\": \"Laguna Web Services\",\r\n    \"cpoColonia\": \"LWS870811BI1\",\r\n    \"cpoColoniaTipo\":\"Calle Ortega\",\r\n    \"cpoZona\":401,\r\n    \"usuNumCtrl\":1\r\n}\r\n\r\n"
+						},
+						"url": {
+							"raw": "localhost/alianzaapi/public/codigopostal/v1/modificar?cpoNumCtrl=144105&XDEBUG_SESSION_START=13380",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"codigopostal",
+								"v1",
+								"modificar"
+							],
+							"query": [
+								{
+									"key": "cpoNumCtrl",
+									"value": "144105"
+								},
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "13380"
+								}
+							]
+						},
+						"description": "Actualiza una empresa existente"
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerCodigoPostal",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IkphdmllciIsImVtYWlsIjoianNAZ21haWwuY29tIn0.hb_Fck5jEo0F03xz5Z3OiXrIzdf95YFFpiy4FPf9L8Q"
+							}
+						],
+						"url": {
+							"raw": "localhost/alianzaapi/public/codigopostal/v1/obtenerCodigoPostal?cpoNumCtrl=144104",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"codigopostal",
+								"v1",
+								"obtenerCodigoPostal"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "cpoNumCtrl",
+									"value": "144104"
+								}
+							]
+						},
+						"description": "Obtiene toda la tabla de Código Postal en formato json"
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerCodigoPostalxCodigo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IkphdmllciIsImVtYWlsIjoianNAZ21haWwuY29tIn0.hb_Fck5jEo0F03xz5Z3OiXrIzdf95YFFpiy4FPf9L8Q"
+							}
+						],
+						"url": {
+							"raw": "localhost/alianzaapi/public/codigopostal/v1/obtenerCodigoPostalxCodigo?cpoCodigo=27443",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"codigopostal",
+								"v1",
+								"obtenerCodigoPostalxCodigo"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "cpoCodigo",
+									"value": "27443"
+								}
+							]
+						},
+						"description": "Obtiene toda la tabla de Código Postal en formato json"
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerTabla",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IkphdmllciIsImVtYWlsIjoianNAZ21haWwuY29tIn0.hb_Fck5jEo0F03xz5Z3OiXrIzdf95YFFpiy4FPf9L8Q"
+							}
+						],
+						"url": {
+							"raw": "localhost/alianzaapi/public/codigopostal/v1/obtenerTabla",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"codigopostal",
+								"v1",
+								"obtenerTabla"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Obtiene toda la tabla de Código Postal en formato json"
+					},
+					"response": []
+				}
+			],
+			"description": "El código postal es un esquema que asigna a distintas zonas o lugares de un país, un código que sirve para facilitar y mecanizar el encaminamiento de una pieza de correo. Generalmente es una serie de dígitos, aunque en algunos países incluyen letras. También se utiliza en los navegadores GPS para ubicar lugares."
+		},
+		{
+			"name": "Documento",
+			"item": [
+				{
+					"name": "Alianza/Documento/agregar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Enctype",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "documento",
+									"type": "file",
+									"src": "/C:/Users/Mike Padilla/Desktop/Carta MIGUEL SEA Coahuila.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/alianzaapi/public/Documento/v1/agregar/Documento_1?XDEBUG_SESSION_START=16490",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"Documento",
+								"v1",
+								"agregar",
+								"Documento_1"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "16490"
+								}
+							]
+						},
+						"description": "Sube un archivo a la api de alianza:\n\nlocalhost/AlianzaWS/public/Documento/v1/subir/Factura_5?XDEBUG_SESSION_START=XXXXX"
+					},
+					"response": []
+				},
+				{
+					"name": "Alianza/Documento/obtenerDocumento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost/alianzaapi/public/Documento/v1/obtenerDocumento/Documento_1.pdf?XDEBUG_SESSION_START=16490",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"Documento",
+								"v1",
+								"obtenerDocumento",
+								"Documento_1.pdf"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "16490"
+								}
+							]
+						},
+						"description": "Esta recurso se encarga de obtener un archivo por medio del nombre de este"
+					},
+					"response": []
+				}
+			],
+			"description": "Administración de documentos."
+		},
+		{
+			"name": "Sucursal",
+			"item": [
+				{
+					"name": "obtenerTabla",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IkphdmllciIsImVtYWlsIjoianNAZ21haWwuY29tIn0.hb_Fck5jEo0F03xz5Z3OiXrIzdf95YFFpiy4FPf9L8Q"
+							}
+						],
+						"url": {
+							"raw": "localhost/alianzaapi/public/codigopostal/v1/obtenerTabla",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"codigopostal",
+								"v1",
+								"obtenerTabla"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Obtiene toda la tabla de Código Postal en formato json"
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerSucursal",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "charset",
+								"type": "text",
+								"value": "utf-8"
+							}
+						],
+						"url": {
+							"raw": "localhost/alianzaapi/public/sucursal/v1/obtenerSucursal?sucNumCtrl=8&?XDEBUG_SESSION_START=19372",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"sucursal",
+								"v1",
+								"obtenerSucursal"
+							],
+							"query": [
+								{
+									"key": "sucNumCtrl",
+									"value": "8"
+								},
+								{
+									"key": "?XDEBUG_SESSION_START",
+									"value": "19372"
+								}
+							]
+						},
+						"description": "Obtiene toda la tabla de Código Postal en formato json"
+					},
+					"response": []
+				}
+			],
+			"description": "Configuración de las sucursales del sistema."
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "obtenerTabla",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/alianzaapi/public/usuario/v1/obtenerTabla?sucNumCtrl=1&XDEBUG_SESSION_START=16434",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"usuario",
+								"v1",
+								"obtenerTabla"
+							],
+							"query": [
+								{
+									"key": "sucNumCtrl",
+									"value": "1"
+								},
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "16434"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregarAsistencia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "usuClave",
+									"value": "dev",
+									"type": "text"
+								},
+								{
+									"key": "sucNumCtrl",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/alianzaapi/public/usuario/v1/agregarAsistencia?XDEBUG_SESSION_START=10200",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"usuario",
+								"v1",
+								"agregarAsistencia"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "10200"
+								}
+							]
+						},
+						"description": "Agrega un nuevo código postal"
+					},
+					"response": []
+				},
+				{
+					"name": "agregar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uhdHuella",
+									"value": "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",
+									"type": "text"
+								},
+								{
+									"key": "usuClave",
+									"value": "dev",
+									"type": "text"
+								},
+								{
+									"key": "sucNumCtrl",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "18078",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/alianzaapi/public/usuario/v1/agregar?XDEBUG_SESSION_START=18078",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"usuario",
+								"v1",
+								"agregar"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "18078"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Usuarios del sistema."
+		},
+		{
+			"name": "Parametro",
+			"item": [
+				{
+					"name": "obtenerSucursal",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "charset",
+								"type": "text",
+								"value": "utf-8"
+							}
+						],
+						"url": {
+							"raw": "localhost/alianzaapi/public/parametro/v1/obtenerParametroVersion?parClave=SIS000044",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"alianzaapi",
+								"public",
+								"parametro",
+								"v1",
+								"obtenerParametroVersion"
+							],
+							"query": [
+								{
+									"key": "parClave",
+									"value": "SIS000044"
+								},
+								{
+									"key": "?XDEBUG_SESSION_START",
+									"value": "19372",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Obtiene toda la tabla de Código Postal en formato json"
+					},
+					"response": []
+				}
+			],
+			"description": "Configuración de los parámetros del sistema."
+		}
+	]
+}
