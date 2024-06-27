@@ -1,20 +1,7 @@
 {
-  "name": "slim/slim-skeleton",
-  "description": "Construalianza.app API",
-  "keywords": [
-    "microframework",
-    "rest",
-    "router"
-  ],
-  "homepage": "https://www.construalianza.app/",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Construalianza.app",
-      "email": "malianza.ventas@gmail.com",
-      "homepage": "https://www.construalianza.app/"
-    }
-  ],
+  "name": "Metrify",
+  "version": "1.0.0",
+  "description": "Metrify Cloud ERP",
   "require": {
     "php": ">=7.1",
     "slim/slim": "^3.1",
@@ -38,5 +25,8 @@
   "scripts": {
     "start": "php -S localhost:8080 -t public",
     "test": "phpunit"
-  }
+  },
+  "author": "https://metrifyerp.com/",
+  "license": "ISC",
+  "homepage": "https://metrifyerp.com/"
 }

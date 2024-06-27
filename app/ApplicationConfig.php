@@ -10,10 +10,10 @@ date_default_timezone_set("America/Monterrey");
 
 $arrCarpetasaCargar = [
     '../META-INF/',
-    'php/com/idealabs/framework/utils/',
-    'php/com/idealabs/construalianza.app/modelos/',
-    'php/com/idealabs/construalianza.app/clases/',
-    'php/com/idealabs/construalianza.app/api/'
+    'php/com/metrify/framework/utils/',
+    'php/com/metrify/modelos/',
+    'php/com/metrify/clases/',
+    'php/com/metrify/api/'
 ];//$arrCarpetasaCargar
 
 //Recorre el arreglo de carpetas para poder obtener los archivos .php de estas
